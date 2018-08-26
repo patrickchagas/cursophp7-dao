@@ -15,15 +15,15 @@ class Sql extends PDO {
 		//Associar aos parametros
 		foreach ($parameters as $key => $value) {
 			
-			$statement->bindParam($key, $value);	
+			$this->setParam($statement, $key, $value);	
 
 		}
 	}
 
 	//Bind de um parâmetro
-	private function setParam($statement, $key, $value) {
+	private function setParam($statement, $key, $value){
 
-		$this->setParam($statement, $key, $value);
+		$statement->bindParam($key, $value);
 
 	}
 
